@@ -1,38 +1,91 @@
-.App {
+.content {
+  max-width: 75%;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.post{
+  display: grid;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.post table{
+  border-collapse: collapse;
+  text-align: left;
+  overflow: hidden;
+}
+thead{
+  box-shadow: 0 5px 10px rgb(211, 211, 211);
+}
+th{
+  background-color: rgb(0, 0, 29);
+  padding: 1rem 2rem;
+  letter-spacing: 0.1rem;
+  font-weight: 700;
+  color: aliceblue;
+}
+td{
+  padding: 1rem 2rem;
+}
+tr{
+  cursor: pointer;
+}
+tr:nth-child(even){
+  background-color: rgb(201, 200, 200);
+}
+tr:hover{
+  transform:scale(1.05);
+}
+
+/* create new   form */
+.create {
+  max-width: 400px;
+  margin: 0 auto;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.create label {
+  text-align: left;
+  display: block;
+}
+.create h2 {
+  font-size: 20px;
+  color: rgb(0, 0, 29);
+  margin-bottom: 30px;
+}
+.create input, .create textarea, .create select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
+.create button {
+  background: rgb(0, 0, 29);
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.details h2 h3 {
+  font-size: 20px;
+  color: rgb(0, 0, 29);
+  margin-bottom: 10px;
+}
+.details div {
+  margin: 20px 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.post-button{
+  background: rgb(0, 0, 29);
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-left: 87%;
 }
