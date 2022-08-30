@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 export const Home = () => {
-  const { data, error } = useFetch("");
+  const { data:posts, error } = useFetch("http://127.0.0.1:8000/document/");
   const [search, setSearch] = useState("");
   const navigate = useNavigate();
 
@@ -25,7 +25,7 @@ export const Home = () => {
         />
       </div>
       <button className="post-button" onClick={handleRoute}>Post Document +</button>
-      <PostList />
+      <PostList posts={posts} />
     </div>
   );
 };

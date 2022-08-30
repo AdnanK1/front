@@ -1,48 +1,34 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export const PostList = () => {
+export const PostList = ({ posts }) => {
   return (
     <div className="post">
       <table>
-        <thead>  
-            <th>Catch word</th>
-            <th>Station</th>
-            <th>Heading</th>
-            <th>Date</th>
-            <th>Author</th>
+        <thead>
+          <th>Catch word</th>
+          <th>Station</th>
+          <th>Heading</th>
+          <th>Date</th>
+          <th>Author</th>
         </thead>
         <tbody>
-          <tr>
-            <td>Accident</td>
-            <td>Isiolo</td>
-            <td>Five killed after a trailer crashed into church buildings</td>
-            <td>March 1, 2022</td>
-            <td>Abduba Mamo</td>
-          </tr>
-          <tr>
-            <td>Accident</td>
-            <td>Isiolo</td>
-            <td>Five killed after a trailer crashed into church buildings</td>
-            <td>March 1, 2022</td>
-            <td>Abduba Mamo</td>
-          </tr>
-          <tr>
-            <td>Accident</td>
-            <td>Isiolo</td>
-            <td>Five killed after a trailer crashed into church buildings</td>
-            <td>March 1, 2022</td>
-            <td>Abduba Mamo</td>
-          </tr>
-          <tr>
-            <td>Accident</td>
-            <td>Isiolo</td>
-            <td>Five killed after a trailer crashed into church buildings</td>
-            <td>March 1, 2022</td>
-            <td>Abduba Mamo</td>
-          </tr>
+          {posts.map((post) => (
+            <tr key={post.id}>
+              <Link to={`/post/${post.id}`}>
+                <td>{post.catch_word}</td>
+                <td>{post.station}</td>
+                <td>{post.heading}</td>
+                <td>{post.date}</td>
+                <td>{post.author}</td>
+              </Link>
+            </tr>
+          ))}
         </tbody>
       </table>
     </div>
   );
 };
+
+        
+       

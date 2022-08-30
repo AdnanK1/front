@@ -1,7 +1,7 @@
 .content {
   max-width: 75%;
   margin: 40px auto;
-  padding: 20px;
+  /* padding: 20px; */
 }
 
 .post{
@@ -88,4 +88,13 @@ tr:hover{
   border-radius: 8px;
   cursor: pointer;
   margin-left: 87%;
+}
+.search{
+  margin-bottom: 10px;
+  margin-left: 2%;
+  border-radius: 13px;
+  padding: 10px 70px;
+}
+.post a{
+  text-decoration: none;
 }
